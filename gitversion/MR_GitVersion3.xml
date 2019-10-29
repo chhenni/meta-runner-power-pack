@@ -108,6 +108,7 @@ function Build-Arguments() {
             $args = "$args /UpdateAssemblyInfo"
         }
     }
+	$args = "$args /nonormalize"
     if ($output -eq "json" -and (Test-IsSpecified $outputFile)) {
         $args = "$args > ""$outputFile"""
     }
